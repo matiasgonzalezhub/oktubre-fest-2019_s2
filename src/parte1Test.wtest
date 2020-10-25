@@ -1,0 +1,66 @@
+import Personas.*
+import marcas.*
+import jarras.*
+
+test "testSaberContenidoAlcohol" {
+ 
+	 
+var pepe = new Persona(peso = 63, gustaMusicaTradicional= false, nivelDeAguante=5,nacionalidad="argentino")
+
+	
+var patagonia = new CervezaRoja( pais="argentina", graduacionAlcohol = 10,gramosDeLupuloPorLitro=10)
+
+var jarra = new Jarra(capacidad = 1, marca = patagonia )
+
+
+
+
+pepe.agregarCerveza(jarra)
+
+assert.equals(1, jarra.saberContenidoDeAlcohol())
+
+}
+
+test "testSaberTotalDeAlcohol" {
+	 
+var pepe = new Persona(peso = 63, gustaMusicaTradicional= false, nivelDeAguante=5,nacionalidad="argentino")
+
+var patagonia = new CervezaRoja( pais="argentina", graduacionAlcohol = 10,gramosDeLupuloPorLitro=10)
+
+var jarra = new Jarra(capacidad = 1, marca = patagonia)
+
+pepe.agregarCerveza(jarra)
+
+assert.equals(10, pepe.totalAlcholIngerido())
+
+}
+
+test "testSaberSiEstaEbria" {
+
+	 
+var pepe = new Persona(peso = 63, gustaMusicaTradicional= false, nivelDeAguante=5,nacionalidad="argentino")
+
+var patagonia = new CervezaRoja( pais="argentina", graduacionAlcohol = 10,gramosDeLupuloPorLitro=10)
+
+var jarra = new Jarra(capacidad = 1, marca = patagonia )
+
+pepe.agregarCerveza(jarra)
+
+assert.equals(true, pepe.estaEbrio())
+
+}
+
+test "testSaberSiLeGustaMarca" {
+
+	 
+var pepe = new Persona(peso = 63, gustaMusicaTradicional= false, nivelDeAguante=5,nacionalidad="argentino")
+
+var patagonia = new CervezaRoja( pais="argentina", graduacionAlcohol = 10,gramosDeLupuloPorLitro=10)
+
+var jarra = new Jarra(capacidad = 1, marca=patagonia)
+
+pepe.agregarCerveza(jarra)
+
+assert.equals(false, pepe.leGustaCerveza("quilmes"))
+
+}
