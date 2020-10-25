@@ -56,7 +56,7 @@ class CervezaNegra inherits Cerveza
 	override method darGraduacionAlcoholEnLitros()
 	{
 		
-		return (self.getGraduacionReglamentaria() + 2*gramosDeLupuloPorLitro).min()
+		return (self.getGraduacionReglamentaria() + 2*gramosDeLupuloPorLitro).min(self.getGraduacionReglamentaria())
 	}
 	
 	method getGraduacionReglamentaria(){return graduacionReglamentaria}

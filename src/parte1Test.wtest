@@ -17,7 +17,7 @@ var jarra = new Jarra(capacidad = 1, marca = patagonia )
 
 pepe.agregarCerveza(jarra)
 
-assert.equals(1, jarra.saberContenidoDeAlcohol())
+assert.equals(6.25, jarra.saberContenidoDeAlcohol())
 
 }
 
@@ -31,7 +31,7 @@ var jarra = new Jarra(capacidad = 1, marca = patagonia)
 
 pepe.agregarCerveza(jarra)
 
-assert.equals(10, pepe.totalAlcholIngerido())
+assert.equals(6.25, pepe.totalAlcholIngerido())
 
 }
 
