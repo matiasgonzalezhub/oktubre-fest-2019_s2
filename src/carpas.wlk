@@ -26,6 +26,7 @@ class Carpa {
 	method puedeEntrar(persona)
 	{
 		return self.dejaEntrarAPersona(persona) && persona.quiereEntraACarpa()
+	
 	}
 	
 	method entrarPersona(persona)

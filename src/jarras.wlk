@@ -5,7 +5,7 @@ class Jarra {
 	
 	method saberContenidoDeAlcohol()
 	{
-		return capacidad * marca.graduacionAlcohol()
+		return capacidad * marca.darGraduacionAlcoholEnLitros()
 	}
 	
 	

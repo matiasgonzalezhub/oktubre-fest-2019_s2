@@ -2,7 +2,7 @@ class Marca {
 	
 	var property nombre
 	var property pais
-	var property graduacionAlcohol
+	
 		
 	
 	
@@ -15,6 +15,7 @@ class Cerveza
 	var  gramosDeLupuloPorLitro
 	var  pais
 	var  graduacionAlcohol
+
 	
 	method getPais()
 	{

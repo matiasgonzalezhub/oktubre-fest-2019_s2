@@ -7,7 +7,7 @@ test "testQuiereEntrar" {
 
 var pepe = new Persona(peso = 63, gustaMusicaTradicional= false, nivelDeAguante=5,nacionalidad="argentino")
 
-var carpa  = new Carpa( capacidad = 10,	tieneBandaMusical =false,	marcaVendida = "quilmes")
+var carpa  = new Carpa( capacidad = 10,	tieneBandaMusical =false,	marca = "quilmes")
 	
 	
 	assert.equals(false, pepe.quiereEntraACarpa(carpa))
@@ -19,7 +19,7 @@ test "testCarpaDejaIngresar" {
 
 var pepe = new Persona(peso = 63, gustaMusicaTradicional= false, nivelDeAguante=5,nacionalidad="argentino")
 
-var carpa  = new Carpa( capacidad = 10,	tieneBandaMusical =false,	marcaVendida = "quilmes")
+var carpa  = new Carpa( capacidad = 10,	tieneBandaMusical =false,	marca = "quilmes")
 	
 	
 	assert.equals(true, carpa.dejaEntrarAPersona(pepe))
@@ -31,7 +31,7 @@ test "testPersonaPuedeEntrar" {
 
 var pepe = new Persona(peso = 63, gustaMusicaTradicional= false, nivelDeAguante=5,nacionalidad="argentino")
 
-var carpa  = new Carpa( capacidad = 10,	tieneBandaMusical =false,	marcaVendida = "quilmes")
+var carpa  = new Carpa( capacidad = 10,	tieneBandaMusical =false,	marca = "quilmes")
 	
 	
 	assert.equals(true, carpa.puedeEntrar(pepe.quiereEntraACarpa(carpa)))
@@ -42,10 +42,10 @@ test "testPersonaEntraCarpa" {
 
 var pepe = new Persona(peso = 63, gustaMusicaTradicional= false, nivelDeAguante=5,nacionalidad="argentino")
 
-var carpa  = new Carpa( capacidad = 10,	tieneBandaMusical =false,	marcaVendida = "quilmes")
+var carpa  = new Carpa( capacidad = 10,	tieneBandaMusical =false,	marca = "quilmes")
 	
 	
-	assert.equals(true, carpa.entrarPersona(pepe.quiereEntraACarpa(carpa)))
+	assert.equals(true, carpa.entrarPersona(pepe))
 
 }
 
@@ -54,7 +54,7 @@ test "testCarpaSirveCerveza" {
 
 var pepe = new Persona(peso = 63, gustaMusicaTradicional= false, nivelDeAguante=5,nacionalidad="argentino")
 
-var carpa  = new Carpa( capacidad = 10,	tieneBandaMusical =false,	marcaVendida = "quilmes")
+var carpa  = new Carpa( capacidad = 10,	tieneBandaMusical =false,	marca = "quilmes")
 	
 	
 	assert.fail( carpa.servirJarra(1,pepe))
@@ -66,7 +66,7 @@ test "testSaberEbrios" {
 
 var pepe = new Persona(peso = 63, gustaMusicaTradicional= false, nivelDeAguante=5,nacionalidad="argentino")
 
-var carpa  = new Carpa( capacidad = 10,	tieneBandaMusical =false,	marcaVendida = "quilmes")
+var carpa  = new Carpa( capacidad = 10,	tieneBandaMusical =false,	marca = "quilmes")
 	
 	
 	assert.equals( 0,carpa.saberCuantosEbriosEmpedernidos())
@@ -78,7 +78,7 @@ test "testSaberSiEsPatriota" {
 
 var pepe = new Persona(peso = 63, gustaMusicaTradicional= false, nivelDeAguante=5,nacionalidad="argentino")
 
-var carpa  = new Carpa( capacidad = 10,	tieneBandaMusical =false,	marcaVendida = "quilmes")
+var carpa  = new Carpa( capacidad = 10,	tieneBandaMusical =false,	marca = "quilmes")
 	
 	
 	assert.equals( true,pepe.esPatriota())
